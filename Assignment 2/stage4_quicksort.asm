@@ -84,7 +84,7 @@ stage4_quicksort:
           cmp r0,r1; compare current and next
           ble finish ; if current < next then return
           str r1,[r4] ; else swap the 2 element
-        ; your function must mov the address of the sorted array to r0
+          ; your function must mov the address of the sorted array to r0
           str r0,[r4,#4] ; swap
 
         finish:
