@@ -11,12 +11,12 @@ stage4_quicksort:
         ; ( and pop them off at the very end)
         adr r1, numarray2 ; array address
 
-        quicksort: ; 
+        quicksort:
           push {r0-r10,lr}
           mov r4,r1 ; r4 = address
           mov r5,r0 ; r5 = size
           cmp r5,#1 ; compare size to 1
-          ble finish ; if size < 1 => finish
+          ble finish ; if size < 1 then finish
           cmp r5,#2 ; compare size to 2
           beq check_sorted ; if size != 2 then start to compare
 
